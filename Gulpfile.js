@@ -12,7 +12,7 @@ var sassOptions = {
     outputStyle: 'expanded'
 };
 
-gulp.task('default', ['sass', 'browser-sync', 'watch']);
+gulp.task('default', ['serve']);
 
 gulp.task('browser-sync', function() {
     browserSync.init({
@@ -20,6 +20,16 @@ gulp.task('browser-sync', function() {
             baseDir: "./dist"
         }
     });
+});
+
+gulp.task('serve', ['sass'], function() {
+
+    browserSync.init({
+        server: "./dist"
+    });
+
+    gulp.watch("src/sass/scss/**/*", ['sass']);
+    gulp.watch("dist/*.html").on('change', browserSync.reload);
 });
 
 gulp.task('sass', function () {
@@ -32,10 +42,10 @@ gulp.task('sass', function () {
         .pipe(browserSync.stream());
 });
 
-gulp.task('watch', function() {
-    return gulp
-        .watch(input, ['sass'])
-        .on('change', function(event) {
-            console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
-        });
-});
+//gulp.task('watch', function() {
+//    return gulp
+//        .watch(input, ['sass'])
+//        .on('change', function(event) {
+//            console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
+//        });
+//});
