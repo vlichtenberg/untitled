@@ -15,5 +15,13 @@
   "bugs": {
     "url": "https://github.com/vlichtenberg/untitled/issues"
   },
-  "homepage": "https://github.com/vlichtenberg/untitled#readme"
+  "homepage": "https://github.com/vlichtenberg/untitled#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.6",
+    "gulp": "^3.9.1",
+    "gulp-cli": "^1.2.2",
+    "gulp-sass": "^3.0.0",
+    "gulp-sourcemaps": "^2.2.2",
+    "gulp-watch": "^4.3.11"
+  }
 }
