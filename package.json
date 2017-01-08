@@ -1,0 +1,19 @@
+{
+  "name": "untitled",
+  "version": "1.0.0",
+  "description": "website for untitled consultancy",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vlichtenberg/untitled.git"
+  },
+  "author": "Vince",
+  "license": "Closed",
+  "bugs": {
+    "url": "https://github.com/vlichtenberg/untitled/issues"
+  },
+  "homepage": "https://github.com/vlichtenberg/untitled#readme"
+}
