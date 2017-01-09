@@ -1,1 +1,42 @@
+@import 'colors';
 @import 'typography';
+
+.container {
+    margin-top: 10%;
+}
+
+p {
+    min-height: 120px;
+}
+
+.button {
+
+    border-color: $primary;
+    color: $primary;
+    &:hover,&:focus {
+        color: lighten($primary, 20%);
+        border-color: lighten($primary, 20%);
+    }
+    &.button-primary {
+        background-color: $primary;
+        border-color: $primary;
+        &:hover,&:focus {
+            background-color: lighten($primary, 20%);
+            border-color: lighten($primary, 20%);
+            //background-color: $primary_alt;
+            //border-color: $primary_alt;
+        }
+    }
+}
+
+@media (min-width: 650px) {
+    .section {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 650px) {
+    .section {
+        margin-bottom: 50px;
+    }
+}
